@@ -7,14 +7,26 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist":{
+        "NSFaceIDUsageDescription": "We use Face ID to authenticate you securely."
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyCBt9oUn6GE6rnZokc2A2VkvjXWX0a11Os"
+      },
+      "bundleIdentifier": "com.anonymous.MedTMobileApp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCBt9oUn6GE6rnZokc2A2VkvjXWX0a11Os"
+        }
       }
     },
     "web": {
@@ -32,7 +44,8 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
