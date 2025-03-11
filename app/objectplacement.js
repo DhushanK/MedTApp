@@ -16,7 +16,6 @@ const objects = [
 export default function ObjectPlacementScreen() {
   const [placedObjects, setPlacedObjects] = useState([]);
 
-  // 🔹 Example hardcoded data (simulating Bluetooth input)
   useEffect(() => {
     const exampleData = { type: "car", row: 3, col: 4, emoji: "🚗" };
     placeObject(exampleData.row, exampleData.col, exampleData.emoji);
@@ -60,11 +59,10 @@ export default function ObjectPlacementScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#EAF6FF", alignItems: "center", justifyContent: "center" },
   title: { fontSize: 24, fontWeight: "bold", color: "#333", marginBottom: 10 },
-  grid: { flexDirection: "row", flexWrap: "wrap", width: width, height: height * 1.7 }, // 🔹 Grid extends further down
+  grid: { flexDirection: "row", flexWrap: "wrap", width: width, height: height * 1.7 }, 
   cell: { width: CELL_SIZE, height: CELL_SIZE, borderWidth: 1, borderColor: "#ccc" },
   object: { position: "absolute", fontSize: 30 },
 
-  // 🔹 Legend Styling
   legendContainer: {
     position: "absolute",
     bottom: 20,
