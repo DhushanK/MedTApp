@@ -13,7 +13,6 @@ export default function Receiver() {
         col: 4,  // Grid column
       };
 
-      // ✅ Ensure router is ready before navigation
       router.push({
         pathname: '/objectplacement',
         params: { objectData: receivedData },
